@@ -12,9 +12,9 @@ void setup() {
 }
 
 long oldPosition  = -999;
-
+long newPosition = 999; 
 void loop() {
-  long newPosition = myEnc.read();
+  newPosition = myEnc.read();
   if (newPosition != oldPosition) {
     oldPosition = newPosition;
     SerialUSB.println(newPosition);
